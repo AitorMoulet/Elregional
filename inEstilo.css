@@ -1,0 +1,201 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:  #e0e0e0;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(31, 104, 31);
+}
+header img{
+    width: 50px;
+    height:50px;
+    
+}
+header h1{
+    color: white;
+}
+h2{
+    color: rgb(8, 46, 8);
+    display: inline-block;
+    text-align: center;
+    border-radius: 12px;
+    font-family: "Bebas neue", sans-serif;
+}
+nav{
+  background-color: white;
+}
+ol{
+    padding: 0;
+    font-size: 0;
+}
+li{
+    font-size: 16px;
+    display: inline-block;
+    width: 20%;
+    color:  rgb(31, 104, 31);
+    text-align: center;
+    padding: 10px 0;
+    margin: auto;
+}
+ ol li:hover{
+    background-color: rgb(183, 183, 241);
+    border-top: 3px solid rgb(8, 46, 8);
+    color: white;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    padding: 20px;
+}
+
+section {
+    display: grid;
+    gap: 20px; 
+}
+
+section:nth-of-type(1) {
+    grid-template-columns: repeat(2, 1fr); 
+}
+section:nth-of-type(1) article {
+    display: flex;             /* 1. Convierte el artículo en un contenedor flexible */
+  flex-direction: column;    /* 2. Alinea el contenido en vertical */
+  overflow: hidden;          /* Corta cualquier sobrante */
+  position: relative;
+    background-color: white; 
+    border: 2px solid rgb(8, 46, 8);
+    border-radius: 10px;
+    height: 400px;
+    width: 100%;
+    
+}
+section article img{
+   width: 100%;
+   height: 80%;
+   object-fit: cover; 
+   display: block;
+   z-index: 0;
+   margin: 0;
+   
+    
+    
+}
+section:nth-of-type(2) {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+section:nth-of-type(2) article {
+    background-color: white; 
+    border: 2px solid rgb(8, 46, 8);
+    border-radius: 10px;
+    min-height: 250px; 
+}
+
+section:first-of-type article {
+    min-height: 400px; 
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+main:nth-of-type(2) section{
+  display: grid;
+  grid-template-columns: repeat(3, 2fr) 1fr;
+  grid-template-rows: auto;
+  gap:20px;
+}
+main:nth-of-type(2) section article {
+  background-color: white;
+  border: 2px solid rgb(8, 46, 8) ;
+  border-radius: 10px;
+  width: auto; 
+  max-width: 100%; 
+  box-sizing: border-box;
+}
+main:nth-of-type(2) section article:nth-of-type(4) ul{
+    display: flex;
+  flex-direction: column; /* Los fuerza a ponerse uno debajo de otro */
+  gap: 8px;               /* Añade una separación vertical elegante entre equipos */
+  padding-left: 20px;     /* Deja espacio para los puntitos de la lista */
+  text-align: left;       /* Alínea el texto a la izquierda para que se lea mejor */
+}
+main:nth-of-type(3) section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+}
+main:nth-of-type(3) section article{
+    background-color: white;
+    border: 2px solid rgb(8, 46, 8);
+    border-radius: 10px;
+    min-height: 250px ;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  padding: 20px;
+  background-color: #05104e;
+  height: 200px;
+}
+footer nav {
+background-color: #05104e;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+}
+footer a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    margin: auto;
+}
+footer a:hover {
+    color: #ffffff;
+}
+div img{
+    height: 45px; 
+    width: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+div img:hover {
+  opacity: 1; 
+}
+div p{
+    color: rgba(255, 255, 255, 0.75);
+}
+footer nav:last-child a:hover {
+  transform: translateX(-3px);
+}
+
+footer nav:first-child a:hover {
+  transform: translateX(3px);
+}
+h3{
+    z-index: 1;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px; /* Separa el texto de la foto */
+}
+
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
