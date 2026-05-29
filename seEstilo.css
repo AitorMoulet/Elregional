@@ -17,13 +17,6 @@ header img{
 header h1{
     color: white;
 }
-h2{
-    color: rgb(8, 46, 8);
-    display: inline-block;
-    text-align: center;
-    border-radius: 12px;
-    font-family: "Bebas neue", sans-serif;
-}
 nav{
   background-color: white;
 }
@@ -45,93 +38,45 @@ li{
     border-top: 3px solid rgb(8, 46, 8);
     color: white;
 }
-main {
+a{
+  color: inherit;
+  text-decoration: none;
+}
+main{
     display: flex;
     flex-direction: column;
     gap: 20px; 
     padding: 20px;
 }
-
-section {
+section{
     display: grid;
-    gap: 20px; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
 }
-
-section:nth-of-type(1) {
-    grid-template-columns: repeat(2, 1fr); 
-}
-section:nth-of-type(1) article {
-    display: flex;             /* 1. Convierte el artículo en un contenedor flexible */
-  flex-direction: column;    /* 2. Alinea el contenido en vertical */
-  overflow: hidden;          /* Corta cualquier sobrante */
-  position: relative;
-    background-color: white; 
+article{
     border: 2px solid rgb(8, 46, 8);
     border-radius: 10px;
-    height: 400px;
-    width: 100%;
-    
+    background-color: white;
 }
-section article img{
+article img{
    width: 100%;
-   height: 80%;
+   height: 40%;
    object-fit: cover; 
    display: block;
-   z-index: 0;
    margin: 0;
-   
-    
-    
 }
-section:nth-of-type(2) {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-section:nth-of-type(2) article {
-    background-color: white; 
-    border: 2px solid rgb(8, 46, 8);
-    border-radius: 10px;
-    min-height: 250px; 
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-section:first-of-type article {
-    min-height: 400px; 
-}
-a{
-  color: inherit;
-  text-decoration: none;
-}
-main:nth-of-type(2) section{
-  display: grid;
-  grid-template-columns: repeat(3, 2fr) 1fr;
-  grid-template-rows: auto;
-  gap:20px;
-}
-main:nth-of-type(2) section article {
-  background-color: white;
-  border: 2px solid rgb(8, 46, 8) ;
-  border-radius: 10px;
-  width: auto; 
-  max-width: 100%; 
-  box-sizing: border-box;
-}
-main:nth-of-type(2) section article:nth-of-type(4) ul{
-    display: flex;
-  flex-direction: column; /* Los fuerza a ponerse uno debajo de otro */
-  gap: 8px;               /* Añade una separación vertical elegante entre equipos */
-  padding-left: 20px;     /* Deja espacio para los puntitos de la lista */
-  text-align: left;       /* Alínea el texto a la izquierda para que se lea mejor */
-}
-main:nth-of-type(3) section{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:20px;
-}
-main:nth-of-type(3) section article{
-    background-color: white;
-    border: 2px solid rgb(8, 46, 8);
-    border-radius: 10px;
-    min-height: 250px ;
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 footer {
@@ -175,30 +120,25 @@ footer nav:last-child a:hover {
 footer nav:first-child a:hover {
   transform: translateX(3px);
 }
-h3{
-    z-index: 1;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  padding: 10px;
+h2{
+  padding: 20px;
+  font-family: "Bebas neue", sans-serif;
 }
-
-
-.bebas-neue-regular {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.montserrat {
+p{
+  padding: 20px;
   font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+}
+button{
+  font-family: "Bebas neue", sans-serif;
+  margin-left: 20px;
+  color: white;
+  background-color: #05104e;
+}
+  section article:nth-of-type(2) button{
+  background-color:rgb(8, 46, 8) ;
 }
 @media screen and (max-width: 360px) {
-
+   
     nav ol {
         display: flex;
         flex-direction: column;
@@ -207,7 +147,7 @@ h3{
         gap: 10px;
     }
 
-   
+
     header {
         display: flex;
         flex-direction: column;
@@ -254,42 +194,30 @@ h3{
         max-width: 100%;
         height: auto;
     }
-    main {
+    main section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
         padding: 10px;
     }
 
-    h2 {
-        font-size: 1.4rem;
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    
-    section {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    article {
+    article img {
         width: 100%;
-        box-sizing: border-box;
+        max-width: 280px;
+        height: auto;
+        border-radius: 8px;
     }
 
-    article h3 {
-        font-size: 1.1rem;
-    }
-
-    
-    form {
+    button {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    input, select, textarea {
-        width: 100%;
-        box-sizing: border-box;
+        max-width: 200px;
+        padding: 10px;
     }
 }
-
